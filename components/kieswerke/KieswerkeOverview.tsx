@@ -5,23 +5,41 @@ import { motion } from "framer-motion"
 const ease = [0.22, 1, 0.36, 1] as const
 
 const highlights = [
-  { value: "2059", label: "Genehmigungshorizont" },
-  { value: "14,31 Mio. t", label: "Gesicherte Vorräte" },
+  { value: "2025", label: "Rahmenbetriebsplan erweitert auf weitere Jahrzehnte" },
+  { value: "Millionen Tonnen", label: "Gesicherte Vorräte" },
   { value: "~40", label: "Mitarbeiter" },
 ]
 
 const tags = [
-  "GmbH",
-  "Gegründet 2011",
   "Groß Buchholz / Golmer Berg",
-  "2 Mio. t / Jahr",
+  "7 - 12 Mio. Tonnen Jahresertrag",
   "Rohstoff · Recycling · Transport",
 ]
 
+const marktStats = [
+  {
+    value: "10 J.",
+    label: "Typische Neu-Genehmigungsdauer",
+    description: "Strukturelle Knappheit bestehender Lagerstätten.",
+  },
+  {
+    value: "4",
+    label: "Wirtschaftsräume im Lieferradius",
+    description: "Hamburg, Hannover-Wolfsburg-Salzgitter, Magdeburg, A14-Korridor.",
+  },
+  {
+    value: "+33 J.",
+    label: "Unser Genehmigungshorizont",
+    description: "Sonderstellung in einer unterversorgten Region Norddeutschlands.",
+  },
+]
+
+const nachfragetreiber = ["A14-Ausbau", "A39-Ausbau", "Windkraftanlagenbau"]
+
 export default function KieswerkeOverview() {
   return (
-    <section className="bg-[#1a1a1a] py-24 border-t border-[#333]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="ueberblick" className="scroll-mt-20 bg-[#1a1a1a] py-24 border-t border-[#333]">
+      <div className="w-full px-6">
 
         {/* Headline */}
         <motion.div
@@ -39,7 +57,7 @@ export default function KieswerkeOverview() {
             <br />
             DIE BASIS –
             <br />
-            BIS 2059.
+            GENERATIONENÜBERGREIFEND.
           </h2>
         </motion.div>
 
@@ -76,11 +94,52 @@ export default function KieswerkeOverview() {
             Die PS Kieswerke GmbH betreibt am Standort Groß Buchholz / Golmer Berg einen Kies- und Sandtagebau mit nachhaltiger Marktposition.
           </p>
           <p>
-            Drei strategische Hebel sichern den Erwerberwert: erstens die Verfügung über gesicherte Sand- und Kiesvorräte von 14,31 Mio. Tonnen, zweitens der Ausbau der Wertschöpfung über zertifizierte Mischanlage und Recycling, drittens die Hebung von Synergien.
+            Drei Hebel prägen unsere Marktposition: erstens die Verfügung über Millionen Tonnen gesicherte Sand- und Kiesvorräte, zweitens der Ausbau der Wertschöpfung über zertifizierte Mischanlage und Recycling, drittens die Hebung von Synergien entlang der gesamten Wertschöpfungskette.
           </p>
           <p>
-            Rahmenbetriebsplan und Wasserrecht bis 31.12.2059 gesichert.
+            Rahmenbetriebsplan über Generationen hinweg genehmigt, Wasserrecht gesichert.
           </p>
+        </motion.div>
+
+        {/* Markt: vier starke Wirtschaftsräume */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2, ease }}
+          className="mb-12"
+        >
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#a8c200] mb-6">
+            ▲&nbsp;&nbsp;MARKT
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
+            {marktStats.map(({ value, label, description }, i) => (
+              <motion.div
+                key={label}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08, ease }}
+              >
+                <p className="text-4xl md:text-5xl font-black text-[#a8c200] leading-none mb-3">{value}</p>
+                <p className="text-xs font-bold uppercase tracking-[0.15em] text-white mb-1">{label}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{description}</p>
+              </motion.div>
+            ))}
+          </div>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-3">
+            Nachfragetreiber
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {nachfragetreiber.map((n) => (
+              <span
+                key={n}
+                className="text-[10px] font-bold uppercase tracking-wider text-gray-400 border border-[#2a2a2a] px-3 py-1.5"
+              >
+                {n}
+              </span>
+            ))}
+          </div>
         </motion.div>
 
         {/* Tags marquee */}

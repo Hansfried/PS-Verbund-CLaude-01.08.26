@@ -1,10 +1,11 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 
 const ease = [0.22, 1, 0.36, 1] as const
 
-// 8 items matching PDF page 4
+// 8 items matching Exposé, Unternehmensprofil
 const staerken = [
   {
     nr: "01",
@@ -14,32 +15,32 @@ const staerken = [
   {
     nr: "02",
     titel: "MITARBEITER",
-    text: "Über 40: 8 Maschinisten, 18 Berufskraftfahrer, 4 Büroangestellte, 1 Meister, 6 Handwerker, 5 kaufmännische Angestellte",
+    text: "Über 40 Mitarbeiter: 8 Maschinisten, 18 Berufskraftfahrer, 4 Werkstattarbeiter, 1 Bauleiter, 5 Handarbeiter, 4 kaufmännische Angestellte",
   },
   {
     nr: "03",
     titel: "GRUNDSTÜCK",
-    text: "96 ha im Eigentum. Davon 77 ha im aktiven Abbau. Baurecht 43 ha; davon noch 35 ha abzubauen.",
+    text: "96 ha im Eigentum, davon 77 ha mit 21 ha unverritzt. Bergwerkeigentum 47,50 ha zzgl. grundeigenem Bodenschatz auf 29,50 ha. Nassschnitt 43 ha, davon noch 33 ha abzubauen.",
   },
   {
     nr: "04",
     titel: "WERKSTATT",
-    text: "600 qm mit Arbeitsbühne, Kränen und Bremsenprüfstand.",
+    text: "600 qm mit Arbeitsgrube, Kränen und Bremsenprüfstand.",
   },
   {
     nr: "05",
     titel: "BÜROGEBÄUDE",
-    text: "Vollwertiges Bürogebäude auf 3 Etagen mit 8 Büros, 3 Küchen sowie Diesel-Diesel und Waage.",
+    text: "Vollsaniertes Bürogebäude auf 2 Etagen mit 9 Büros, 2 Küchen sowie Disposition, Waage und einer Diesel- und AdBlue-Tankstelle.",
   },
   {
     nr: "06",
     titel: "GENEHMIGUNGEN",
-    text: "Alle aktiven Genehmigungen vollständig übertragbar.",
+    text: "Alle Genehmigungen langfristig gesichert.",
   },
   {
     nr: "07",
     titel: "MASCHINEN",
-    text: "Eigenfinanzierter Fuhrpark, Bagger, Radlader, LKW.",
+    text: "Eigenfinanzierter Fuhrpark mit Raupen, Baggern, Radladern, LKWs, Dreiachsern, Transportern, Brechanlagen, Mischanlagen und mehr.",
   },
   {
     nr: "08",
@@ -50,8 +51,8 @@ const staerken = [
 
 export default function KieswerkeHaltung() {
   return (
-    <section data-theme="light" className="bg-white py-24 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="profil" data-theme="light" className="scroll-mt-20 bg-white py-24 border-t border-gray-200">
+      <div className="w-full px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
 
           {/* Left — headline block */}
@@ -66,13 +67,31 @@ export default function KieswerkeHaltung() {
               ▲&nbsp;&nbsp;UNTERNEHMENSPROFIL
             </p>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none uppercase text-gray-900 mb-8">
-              DIE KULTUR DES
+              WIR BAUEN AUF
               <br />
-              „FERTIGMACHENS"
+              KLARE STRUKTUREN.
             </h2>
-            <p className="text-gray-500 leading-relaxed max-w-sm">
-              Seit unserer Gründung 2011 stehen wir für eine Kultur der klaren Worte und schnellen Taten. Flache Hierarchien, direkte Kommunikation, Fairness und Effizienz sind bei uns keine Buzzwords, sondern das Fundament unserer täglichen Arbeit.
+            <p className="text-gray-500 leading-relaxed max-w-sm mb-8">
+              Seit über 13 Jahren sind wir mitverantwortlich für den Deichbau, Windenergie-Infrastrukturprojekte und den Bau der A14. Dabei sind wir organisch gewachsen — und wachsen bis heute weiter. Wir profitieren von einem etablierten Kundenstamm sowie starken Partnern der privaten und der öffentlichen Hand.
             </p>
+            <div className="grid grid-cols-2 gap-3 max-w-sm">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-br-[2rem]">
+                <Image
+                  src="/kieswerke-buerogebaeude.jpg"
+                  alt="Bürogebäude Groß Buchholz"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-br-[2rem]">
+                <Image
+                  src="/kieswerke-fuhrpark.jpg"
+                  alt="Fuhrpark Groß Buchholz"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </motion.div>
 
           {/* Right — 8 strengths, clean list layout (no card borders) */}

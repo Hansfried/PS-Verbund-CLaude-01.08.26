@@ -4,10 +4,10 @@ import { useRef, useState, useEffect } from "react"
 import { motion, useInView } from "framer-motion"
 
 const stats = [
-  { value: 2059, suffix: "", label: "Ausgeführte Projekte" },
+  { value: 1879, suffix: "+", label: "Ausgeführte Projekte" },
   { value: 12, suffix: " Mio. t", label: "Jahresleistung" },
-  { value: 4, suffix: "", label: "Gesellschaften" },
-  { value: 40, suffix: "+", label: "Jahre Erfahrung" },
+  { value: 85, suffix: "+", label: "Mitarbeiter" },
+  { value: 13, suffix: "", label: "Jahre im Wachstum" },
 ]
 
 const ease = [0.22, 1, 0.36, 1] as const
@@ -44,7 +44,7 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
 export default function Stats() {
   return (
     <section className="bg-white py-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export default function Stats() {
           transition={{ duration: 0.6, ease }}
           className="mb-16"
         >
-          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Zahlen & Fakten</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#a8c200] mb-3">▲&nbsp;&nbsp;Zahlen & Fakten</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
             Substanz, die hält.
           </h2>

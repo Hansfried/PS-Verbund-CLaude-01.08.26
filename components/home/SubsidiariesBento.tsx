@@ -6,10 +6,10 @@ import { ArrowRight } from "lucide-react"
 import { brands } from "@/lib/navigation-data"
 
 const descriptions: Record<string, string> = {
-  Kieswerke: "Gewinnung und Lieferung hochwertiger mineralischer Rohstoffe.",
+  Kieswerke: "Gewinnung von Kies und Sanden, Herstellung von Beton RC, Schottertragschicht (STS), Recycling von Betonbruch, Abfuhr und Entsorgung.",
   "Straßen & Tiefbau": "Straßen-, Erd- und Tiefbauarbeiten für öffentliche und private Auftraggeber.",
   Infrabau: "Infrastrukturprojekte im Kanal-, Leitungs- und Sonderbau.",
-  Bauschutt: "Professionelle Entsorgung, Aufbereitung und Endlagerung von Bauabfällen.",
+  Bauschutt: "Professionelle Entsorgung, Endlagerung in unserer DK1 Deponie.",
 }
 
 const ease = [0.22, 1, 0.36, 1] as const
@@ -17,7 +17,7 @@ const ease = [0.22, 1, 0.36, 1] as const
 export default function SubsidiariesBento() {
   return (
     <section className="bg-gray-50 py-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,9 +25,9 @@ export default function SubsidiariesBento() {
           transition={{ duration: 0.6, ease }}
           className="mb-12"
         >
-          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Unsere Gesellschaften</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#a8c200] mb-3">▲&nbsp;&nbsp;Unsere Gesellschaften</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
-            Vier Spezialisten. Eine Gruppe.
+            Vier Synergien. Eine Gruppe.
           </h2>
         </motion.div>
 

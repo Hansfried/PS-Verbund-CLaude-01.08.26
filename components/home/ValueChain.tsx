@@ -16,7 +16,7 @@ const ease = [0.22, 1, 0.36, 1] as const
 export default function ValueChain() {
   return (
     <section className="bg-white py-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export default function ValueChain() {
           transition={{ duration: 0.6, ease }}
           className="mb-16"
         >
-          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Wertschöpfung</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#a8c200] mb-3">▲&nbsp;&nbsp;Wertschöpfung</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 max-w-2xl">
             Von der Lagerstätte bis zur Deponie — alles aus einer Hand.
           </h2>

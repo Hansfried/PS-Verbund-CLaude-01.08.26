@@ -29,16 +29,16 @@ function CountUp({ target }: { target: number }) {
 
 const kennzahlen = [
   {
-    display: null,
-    countTarget: 2059,
+    display: "Generationen",
+    countTarget: null,
     einheit: "GENEHMIGUNGSHORIZONT",
-    description: "Planungssicherheit für Generationen",
+    description: "Planungssicherheit über Generationen hinweg",
   },
   {
-    display: "~12 Mio. t",
+    display: "Millionen Tonnen",
     countTarget: null,
     einheit: "GESICHERTE VORRÄTE",
-    description: "Gewinnbare Vorräte aus eigenem Abbaugebiet",
+    description: "Bestätigte Vorratsbasis aus eigenem Abbaugebiet",
   },
   {
     display: null,
@@ -53,17 +53,17 @@ const kennzahlen = [
     description: "Eingespieltes Stammteam mit Expertise vor Ort",
   },
   {
-    display: ">40",
+    display: "22",
     countTarget: null,
-    einheit: "LKW & MASCHINEN",
-    description: "Eigenfinanzierter Fuhrpark für direkte Lieferung",
+    einheit: "EIGENE LKW",
+    description: "Mit Subunternehmen erhöhen wir unsere Schlagkraft auf bis zu 50 LKW",
   },
 ]
 
 export default function KieswerkeKennzahlen() {
   return (
-    <section className="bg-[#0f0f0f] py-24 border-t border-[#333]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="zahlen" className="scroll-mt-20 bg-[#0f0f0f] py-24 border-t border-[#333]">
+      <div className="w-full px-6">
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

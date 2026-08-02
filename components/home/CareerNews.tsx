@@ -1,13 +1,14 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 
 const newsItems = [
-  { date: "Mai 2026", title: "PS Infrabau gewinnt Großauftrag im Raum Hannover" },
-  { date: "Apr. 2026", title: "Neue Recyclinganlage in Betrieb genommen" },
-  { date: "Mär. 2026", title: "PS Verbund begrüßt 15 neue Auszubildende" },
+  { date: "2026", title: "PS Infrabau: Neuer Löschwassertank in Zernitz" },
+  { date: "2026", title: "PS Straßen und Tiefbau: Erweiterung der P+R-Anlage am Bahnhof Ludwigslust" },
+  { date: "2026", title: "PS Straßen und Tiefbau: Repowering-Erschließung in Schönfeld" },
 ]
 
 const ease = [0.22, 1, 0.36, 1] as const
@@ -15,7 +16,7 @@ const ease = [0.22, 1, 0.36, 1] as const
 export default function CareerNews() {
   return (
     <section className="bg-gray-50 py-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full px-6">
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-16">
           {/* Karriere */}
           <motion.div
@@ -24,7 +25,10 @@ export default function CareerNews() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease }}
           >
-            <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Karriere im PS Verbund</p>
+            <div className="relative aspect-video w-full max-w-md overflow-hidden rounded-br-[2.5rem] mb-8">
+              <Image src="/karriere-team.jpg" alt="Karriere im PS Verbund" fill className="object-cover" />
+            </div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#a8c200] mb-3">▲&nbsp;&nbsp;Karriere im PS Verbund</p>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-8 leading-tight">
               Wachse mit einer Gruppe, die wächst.
             </h2>
@@ -47,7 +51,7 @@ export default function CareerNews() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15, ease }}
           >
-            <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Neuigkeiten aus dem Verbund</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#a8c200] mb-3">▲&nbsp;&nbsp;Neuigkeiten aus dem Verbund</p>
             <div>
               {newsItems.map((item, i) => (
                 <motion.div
@@ -57,7 +61,7 @@ export default function CareerNews() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.2 + i * 0.08, ease }}
                 >
-                  <Link href="/news" className="group flex items-start justify-between gap-4 border-t border-gray-200 py-5 hover:border-gray-400 transition-colors">
+                  <Link href="/projekte" className="group flex items-start justify-between gap-4 border-t border-gray-200 py-5 hover:border-gray-400 transition-colors">
                     <div>
                       <p className="text-xs text-gray-400 mb-1">{item.date}</p>
                       <p className="text-sm font-medium text-gray-900 leading-snug">{item.title}</p>
@@ -67,8 +71,8 @@ export default function CareerNews() {
                 </motion.div>
               ))}
               <div className="border-t border-gray-200 pt-5">
-                <Link href="/news" className="text-sm font-semibold text-gray-900 hover:underline inline-flex items-center gap-1.5">
-                  Alle Neuigkeiten <ArrowRight size={13} />
+                <Link href="/projekte" className="text-sm font-semibold text-gray-900 hover:underline inline-flex items-center gap-1.5">
+                  Alle Projekte <ArrowRight size={13} />
                 </Link>
               </div>
             </div>

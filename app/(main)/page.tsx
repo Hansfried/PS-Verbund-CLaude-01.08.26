@@ -6,7 +6,6 @@ import Stats from "@/components/home/Stats"
 import Philosophy from "@/components/home/Philosophy"
 import Sustainability from "@/components/home/Sustainability"
 import CareerNews from "@/components/home/CareerNews"
-import ContactTeaser from "@/components/home/ContactTeaser"
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <Philosophy />
       <Sustainability />
       <CareerNews />
-      <ContactTeaser />
     </main>
   )
 }

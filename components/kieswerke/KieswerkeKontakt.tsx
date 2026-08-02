@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { submitContactForm } from "@/lib/supabase"
 
 const ease = [0.22, 1, 0.36, 1] as const
 
@@ -12,21 +13,44 @@ const personen = [
     email: "info-kieswerke@psverbund.de",
     tel: "03876 / 300 830",
   },
+  {
+    name: "HANSFRIED SCHMELZER",
+    funktion: "Geschäftsführer",
+    email: "hansfried.schmelzer@psverbund.de",
+    tel: "03876 / 300 830",
+  },
+  {
+    name: "THOMAS WODINSKI",
+    funktion: "Prokurist",
+    email: "thomas.wodinski-kieswerke@psverbund.de",
+    tel: "03876 / 300 830",
+  },
 ]
 
 export default function KieswerkeKontakt() {
   const [form, setForm] = useState({ name: "", email: "", nachricht: "" })
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!form.name || !form.email || !form.nachricht) return
-    setSubmitted(true)
+    setSending(true)
+    setError(false)
+    try {
+      await submitContactForm("kieswerke", form.name, form.email, form.nachricht)
+      setSubmitted(true)
+    } catch {
+      setError(true)
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
-    <section id="kontakt" className="bg-[#1a1a1a] py-24 border-t border-[#a8c200]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="kontakt" className="scroll-mt-20 bg-[#1a1a1a] py-24 border-t border-[#a8c200]">
+      <div className="w-full px-6">
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -156,11 +180,17 @@ export default function KieswerkeKontakt() {
                     className="w-full bg-[#111] border border-[#333] text-white placeholder:text-gray-600 focus:border-[#a8c200] outline-none px-4 py-3 text-sm transition-colors duration-200 resize-none"
                   />
                 </div>
+                {error && (
+                  <p className="text-red-400 text-xs">
+                    Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.
+                  </p>
+                )}
                 <button
                   type="submit"
-                  className="w-full bg-[#a8c200] text-black text-xs font-black uppercase tracking-[0.2em] py-4 hover:bg-[#96af00] transition-colors duration-200"
+                  disabled={sending}
+                  className="w-full bg-[#a8c200] text-black text-xs font-black uppercase tracking-[0.2em] py-4 hover:bg-[#96af00] transition-colors duration-200 disabled:opacity-50"
                 >
-                  Absenden ▲
+                  {sending ? "Wird gesendet…" : "Absenden ▲"}
                 </button>
               </form>
             )}

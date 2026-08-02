@@ -2,9 +2,12 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
+import { usePathname } from "next/navigation"
 import { AnimatePresence, motion } from "framer-motion"
 import { X, ChevronDown } from "lucide-react"
 import { brands, mainNavItems } from "@/lib/navigation-data"
+import SiteSearch from "./SiteSearch"
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -12,6 +15,7 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const pathname = usePathname()
   const [expandedItem, setExpandedItem] = useState<string | null>(null)
 
   const toggle = (label: string) => {
@@ -52,26 +56,37 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </button>
             </div>
 
+            {/* Search */}
+            <div className="px-5 py-4 border-b border-gray-100">
+              <SiteSearch variant="panel" onNavigate={onClose} />
+            </div>
+
             {/* Brand Links */}
-            <div className="px-5 py-4 bg-gray-900">
-              <p className="text-gray-500 text-[10px] uppercase tracking-widest mb-3 font-semibold">
-                Gesellschaften
-              </p>
-              <div className="space-y-2">
-                {brands.map((brand) => (
-                  <Link
-                    key={brand.href}
-                    href={brand.href}
-                    onClick={onClose}
-                    className="flex items-center gap-3 text-sm text-gray-300 hover:text-white transition-colors py-0.5"
-                  >
-                    <span
-                      className="w-1 h-4 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: brand.accentColor }}
-                    />
-                    {brand.label}
-                  </Link>
-                ))}
+            <div className="px-5 py-4 bg-white border-b border-gray-100">
+              <div className="flex items-center justify-between gap-2">
+                {brands.map((brand) => {
+                  const isActive = pathname.startsWith(brand.href)
+                  return (
+                    <Link
+                      key={brand.href}
+                      href={brand.href}
+                      onClick={onClose}
+                      aria-label={brand.label}
+                      className="flex flex-1 items-center justify-center py-1"
+                    >
+                      <Image
+                        src={brand.logo}
+                        alt={brand.label}
+                        height={32}
+                        width={46}
+                        className={[
+                          "h-8 w-auto object-contain transition-all duration-300",
+                          isActive ? "opacity-100 grayscale-0" : "opacity-50 grayscale hover:opacity-90 hover:grayscale-0",
+                        ].join(" ")}
+                      />
+                    </Link>
+                  )
+                })}
               </div>
             </div>
 
@@ -105,31 +120,33 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                             className="overflow-hidden"
                           >
                             <div className="bg-gray-50 px-5 py-3 space-y-0.5">
-                              {item.children.map((child) => (
-                                <div key={child.href}>
-                                  <Link
-                                    href={child.href}
-                                    onClick={onClose}
-                                    className="block text-sm text-gray-700 hover:text-gray-900 py-1.5 transition-colors font-medium"
-                                  >
-                                    {child.label}
-                                  </Link>
-                                  {child.children && (
-                                    <div className="pl-4 pb-1 space-y-1">
-                                      {child.children.map((sub) => (
-                                        <Link
-                                          key={sub.href}
-                                          href={sub.href}
-                                          onClick={onClose}
-                                          className="block text-xs text-gray-500 hover:text-gray-800 py-1 transition-colors"
-                                        >
-                                          {sub.label}
-                                        </Link>
-                                      ))}
-                                    </div>
-                                  )}
-                                </div>
-                              ))}
+                              {item.children.map((child) => {
+                                return (
+                                  <div key={child.href}>
+                                    <Link
+                                      href={child.href}
+                                      onClick={onClose}
+                                      className="block text-sm text-gray-700 hover:text-gray-900 py-1.5 transition-colors font-medium"
+                                    >
+                                      {child.label}
+                                    </Link>
+                                    {child.children && (
+                                      <div className="pl-4 pb-1 space-y-1">
+                                        {child.children.map((sub) => (
+                                          <Link
+                                            key={sub.href}
+                                            href={sub.href}
+                                            onClick={onClose}
+                                            className="block text-xs text-gray-500 hover:text-gray-800 py-1 transition-colors"
+                                          >
+                                            {sub.label}
+                                          </Link>
+                                        ))}
+                                      </div>
+                                    )}
+                                  </div>
+                                )
+                              })}
                             </div>
                           </motion.div>
                         )}

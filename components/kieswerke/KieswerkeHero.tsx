@@ -8,12 +8,12 @@ const ease = [0.22, 1, 0.36, 1] as const
 
 export default function KieswerkeHero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-between -mt-[104px] pt-[104px]">
+    <section className="relative min-h-screen flex flex-col justify-between -mt-20 pt-20">
 
       {/* Full-bleed background photo */}
       <div className="absolute inset-0">
         <Image
-          src="/kieswerke-hero-bg.jpg"
+          src="/kieswerke-hero-crusher.jpg"
           alt="Tagebau Groß Buchholz"
           fill
           className="object-cover"
@@ -24,7 +24,7 @@ export default function KieswerkeHero() {
       </div>
 
       {/* Main content */}
-      <div className="relative flex-1 flex flex-col justify-between max-w-7xl mx-auto px-6 py-10 w-full">
+      <div className="relative flex-1 flex flex-col justify-between w-full px-6 py-10">
 
         {/* Top bar: brand */}
         <motion.div
@@ -46,11 +46,11 @@ export default function KieswerkeHero() {
             transition={{ duration: 0.7, delay: 0.2, ease }}
             className="text-5xl md:text-7xl font-black leading-none uppercase tracking-tight text-white mb-6"
           >
-            ROHSTOFF.
+            ROHSTOFFE.
             <br />
             RECYCLING.
             <br />
-            LOGISTIK.
+            TRANSPORT.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
@@ -58,7 +58,7 @@ export default function KieswerkeHero() {
             transition={{ duration: 0.6, delay: 0.32, ease }}
             className="text-base md:text-lg text-white mb-4 font-medium"
           >
-            Versorgungssicherheit für Norddeutschlands Bauprojekte. Aus eigener Hand.
+            Versorgungssicherheit für Brandenburg, Mecklenburg-Vorpommern, Schleswig-Holstein.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
@@ -66,7 +66,7 @@ export default function KieswerkeHero() {
             transition={{ duration: 0.6, delay: 0.4, ease }}
             className="text-sm text-white/90 max-w-xl leading-relaxed"
           >
-            Die PS Kieswerke GmbH betreibt den Kiessandtagebau Groß Buchholz / Golmer Berg in der Prignitz — eine der wenigen Lagerstätten Norddeutschlands mit einem Genehmigungshorizont bis 2059. Aus eigener Gewinnung liefern wir die Substanz für Hoch-, Tief- und Straßenbau. Wir denken in Generationen, nicht in Quartalen.
+            Die PS Kieswerke GmbH betreibt den Kiessandtagebau Groß Buchholz / Golmer Berg in der Prignitz — eine der wenigen Lagerstätten Norddeutschlands mit einem über Generationen hinweg gesicherten Genehmigungshorizont. Aus eigener Gewinnung liefern wir die Substanz für Hoch-, Tief- und Straßenbau. Wir denken in Generationen, nicht in Quartalen.
           </motion.p>
         </div>
 

@@ -11,6 +11,8 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-montserrat);
+  /* Burger-Menu-Umschaltpunkt: Hälfte der logischen Breite eines 16" MacBook (1728px) */
+  --breakpoint-nav: 864px;
 }
 
 h1, h2, h3, h4, h5 {

@@ -7,26 +7,26 @@ const ease = [0.22, 1, 0.36, 1] as const
 
 // ■ as lime square marker — matches PDF style
 const lieferradius = [
-  { ort: "HAMBURG", km: "~135 km" },
-  { ort: "MAGDEBURG", km: "~45 km" },
-  { ort: "WITTENBERGE", km: "~25 km" },
-  { ort: "KANSTORF", km: "~7,7 km" },
+  { ort: "ROSTOCK", km: "km folgt" },
+  { ort: "KARSTÄDT", km: "~12 km" },
+  { ort: "MAGDEBURG", km: "~60 km" },
+  { ort: "NEURUPPIN", km: "km folgt" },
+  { ort: "KYRITZ", km: "km folgt" },
   { ort: "GROß BUCHHOLZ / GOLMER BERG", km: "UNSER STANDORT", highlight: true },
 ]
 
 const genehmigungen = [
-  { label: "Rahmenbetriebsplan", value: "31.12.2059" },
-  { label: "Wasserrecht", value: "31.12.2059" },
-  { label: "Hauptbetriebsplan", value: "DERZEIT" },
-  { label: "Mischplatz", value: "DERZEIT" },
+  { label: "Rahmenbetriebsplan", value: "GENERATIONENÜBERGREIFEND" },
+  { label: "Wasserrecht", value: "GENEHMIGT" },
+  { label: "Hauptbetriebsplan", value: "GENERATIONENÜBERGREIFEND" },
+  { label: "Mischplatz", value: "DAUERHAFT" },
   { label: "Gewerbe", value: "AKTIV" },
-  { label: "Handelsregistereintrag", value: "AKTIV" },
 ]
 
 export default function KieswerkeStandort() {
   return (
-    <section className="bg-[#1a1a1a] py-24 border-t border-[#333]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="standort" className="scroll-mt-20 bg-[#1a1a1a] py-24 border-t border-[#333]">
+      <div className="w-full px-6">
 
         {/* Headline — full width on top */}
         <motion.div
@@ -123,7 +123,7 @@ export default function KieswerkeStandort() {
           className="relative h-[380px] w-full rounded-br-[3.5rem] overflow-hidden flex flex-col justify-end p-8"
         >
           <Image
-            src="/kieswerke-luftbild.png"
+            src="/kieswerke-luftbild-neu.jpg"
             alt="Luftbild Tagebau Groß Buchholz"
             fill
             className="object-cover"

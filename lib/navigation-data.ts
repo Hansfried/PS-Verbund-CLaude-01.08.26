@@ -8,6 +8,7 @@ export type TeaserCard = {
   title: string
   subtitle: string
   href: string
+  image?: string
 }
 
 export type NavItem = {
@@ -21,6 +22,7 @@ export type Brand = {
   label: string
   shortLabel: string
   href: string
+  externalUrl: string
   accentColor: string
   logo: string
 }
@@ -30,6 +32,7 @@ export const brands: Brand[] = [
     label: 'PS Kieswerke GmbH',
     shortLabel: 'Kieswerke',
     href: '/kieswerke',
+    externalUrl: 'https://ps-kieswerke.de',
     accentColor: '#a8c200',
     logo: '/logo-kieswerke-brand.png',
   },
@@ -37,6 +40,7 @@ export const brands: Brand[] = [
     label: 'PS Straßen und Tiefbau GmbH',
     shortLabel: 'Straßen & Tiefbau',
     href: '/strassen-und-tiefbau',
+    externalUrl: 'https://ps-strassentiefbau.de',
     accentColor: '#eab308',
     logo: '/logo-strassen.png',
   },
@@ -44,6 +48,7 @@ export const brands: Brand[] = [
     label: 'PS Infrabau GmbH',
     shortLabel: 'Infrabau',
     href: '/infrabau',
+    externalUrl: 'https://ps-infrabau.de',
     accentColor: '#f97316',
     logo: '/logo-infrabau.png',
   },
@@ -51,6 +56,7 @@ export const brands: Brand[] = [
     label: 'PS Bauschutt GmbH',
     shortLabel: 'Bauschutt',
     href: '/bauschutt',
+    externalUrl: 'https://ps-bauschutt.de',
     accentColor: '#38bdf8',
     logo: '/logo-bauschutt.png',
   },
@@ -66,7 +72,7 @@ export const mainNavItems: NavItem[] = [
       { label: 'PS Bauschutt GmbH', href: '/bauschutt' },
     ],
     teasers: [
-      { title: 'Alle Gesellschaften', subtitle: 'Unsere Unternehmen', href: '/gesellschaften' },
+      { title: 'Alle Gesellschaften', subtitle: 'Unsere Unternehmen', href: '/gesellschaften', image: '/gesellschaften-team.jpg' },
     ],
   },
   {
@@ -80,8 +86,8 @@ export const mainNavItems: NavItem[] = [
       { label: 'Abriss & Recycling', href: '/projekte/abriss-recycling' },
     ],
     teasers: [
-      { title: 'Alle Projekte', subtitle: 'Referenzprojekte', href: '/projekte' },
-      { title: 'Unsere Highlights', subtitle: 'Ausgewählte Projekte', href: '/projekte/highlights' },
+      { title: 'Alle Projekte', subtitle: 'Referenzprojekte', href: '/projekte', image: '/projekte-fahrzeuge.jpg' },
+      { title: 'Unsere Highlights', subtitle: 'Ausgewählte Projekte', href: '/projekte/highlights', image: '/projekte-highlights.jpg' },
     ],
   },
   {
@@ -111,8 +117,8 @@ export const mainNavItems: NavItem[] = [
       },
     ],
     teasers: [
-      { title: 'Alle Stellenangebote', subtitle: 'Werde ein Teil von uns', href: '/karriere/stellenangebote' },
-      { title: 'Die PS Gruppe', subtitle: 'Über uns', href: '/gruppe' },
+      { title: 'Alle Stellenangebote', subtitle: 'Werde ein Teil von uns', href: '/karriere/stellenangebote', image: '/gruppe-stellenangebote.jpg' },
+      { title: 'Die PS Gruppe', subtitle: 'Über uns', href: '/gruppe', image: '/gruppe-ueberuns.jpg' },
     ],
   },
   {
@@ -126,7 +132,7 @@ export const mainNavItems: NavItem[] = [
       { label: 'Pressespiegel', href: '/news/pressespiegel' },
     ],
     teasers: [
-      { title: 'Alle Neuigkeiten', subtitle: 'Aktuelles aus der PS Gruppe', href: '/news' },
+      { title: 'Alle Neuigkeiten', subtitle: 'Aktuelles aus der PS Gruppe', href: '/news', image: '/neuigkeiten-team.jpg' },
     ],
   },
   {
@@ -134,3 +140,26 @@ export const mainNavItems: NavItem[] = [
     href: '/kontakt',
   },
 ]
+
+type FlattenableItem = { label: string; href?: string; children?: FlattenableItem[] }
+
+function flattenNavItems(items: FlattenableItem[]): { label: string; href: string }[] {
+  const result: { label: string; href: string }[] = []
+  for (const item of items) {
+    if (item.href) result.push({ label: item.label, href: item.href })
+    if (item.children) result.push(...flattenNavItems(item.children))
+  }
+  return result
+}
+
+const rawSearchIndex: { label: string; href: string }[] = [
+  { label: 'Home', href: '/' },
+  { label: 'Gesellschaften', href: '/gesellschaften' },
+  ...flattenNavItems(mainNavItems),
+  { label: 'Impressum', href: '/impressum' },
+  { label: 'Datenschutzerklärung', href: '/datenschutz' },
+]
+
+export const searchIndex: { label: string; href: string }[] = rawSearchIndex.filter(
+  (item, index) => rawSearchIndex.findIndex((other) => other.href === item.href) === index
+)

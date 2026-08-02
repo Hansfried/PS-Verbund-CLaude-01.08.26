@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +19,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "PS Verbund",
+  title: {
+    default: "PS Verbund – Kieswerke, Straßen- und Tiefbau, Infrabau, Bauschutt",
+    template: "%s | PS Verbund",
+  },
   description: "PS Verbund – Kieswerke, Straßen- und Tiefbau, Infrabau, Bauschutt",
 };
 
@@ -35,8 +37,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col pt-[104px]">
-        <Navbar />
+      <body className="min-h-full flex flex-col">
         {children}
       </body>
     </html>
