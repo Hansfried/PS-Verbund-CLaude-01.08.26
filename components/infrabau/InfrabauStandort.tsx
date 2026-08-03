@@ -60,7 +60,7 @@ export default function InfrabauStandort() {
           transition={{ duration: 0.6, ease }}
           className="text-gray-400 max-w-2xl leading-relaxed mb-12"
         >
-          Der Standort liegt im Landkreis Prignitz, Gemeinde Karstädt, Ortsteil Stavenow. Die Abbaufläche grenzt unmittelbar an die Trasse der Bundesautobahn A14 — Transportwege sinken damit auf ein Minimum.
+          Der Standort liegt im Landkreis Prignitz, Gemeinde Karstädt, Ortsteil Stavenow. Die Abbaufläche grenzt unmittelbar an die Trasse der Bundesautobahn A14. Transportwege sinken damit auf ein Minimum.
         </motion.p>
 
         {/* Two-column: Distanzen left, Verfahrensstand right */}

@@ -66,7 +66,7 @@ export default function KieswerkeHero() {
             transition={{ duration: 0.6, delay: 0.4, ease }}
             className="text-sm text-white/90 max-w-xl leading-relaxed"
           >
-            Die PS Kieswerke GmbH betreibt den Kiessandtagebau Groß Buchholz / Golmer Berg in der Prignitz — eine der wenigen Lagerstätten Norddeutschlands mit einem über Generationen hinweg gesicherten Genehmigungshorizont. Aus eigener Gewinnung liefern wir die Substanz für Hoch-, Tief- und Straßenbau. Wir denken in Generationen, nicht in Quartalen.
+            Die PS Kieswerke GmbH betreibt den Kiessandtagebau Groß Buchholz / Golmer Berg in der Prignitz, eine der wenigen Lagerstätten Norddeutschlands mit einem über Generationen hinweg gesicherten Genehmigungshorizont. Aus eigener Gewinnung liefern wir die Substanz für Hoch-, Tief- und Straßenbau. Wir denken in Generationen, nicht in Quartalen.
           </motion.p>
         </div>
 

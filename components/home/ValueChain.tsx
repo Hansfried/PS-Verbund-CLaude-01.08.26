@@ -26,7 +26,7 @@ export default function ValueChain() {
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-[#a8c200] mb-3">▲&nbsp;&nbsp;Wertschöpfung</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 max-w-2xl">
-            Von der Lagerstätte bis zur Deponie — alles aus einer Hand.
+            Von der Lagerstätte bis zur Deponie. Alles aus einer Hand.
           </h2>
         </motion.div>
 

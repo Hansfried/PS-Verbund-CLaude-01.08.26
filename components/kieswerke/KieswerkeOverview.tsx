@@ -6,7 +6,7 @@ const ease = [0.22, 1, 0.36, 1] as const
 
 const highlights = [
   { value: "2025", label: "Rahmenbetriebsplan erweitert auf weitere Jahrzehnte" },
-  { value: "Millionen Tonnen", label: "Gesicherte Vorräte" },
+  { value: "Mio. Tonnen", label: "Gesicherte Vorräte" },
   { value: "~40", label: "Mitarbeiter" },
 ]
 
@@ -94,7 +94,7 @@ export default function KieswerkeOverview() {
             Die PS Kieswerke GmbH betreibt am Standort Groß Buchholz / Golmer Berg einen Kies- und Sandtagebau mit nachhaltiger Marktposition.
           </p>
           <p>
-            Drei Hebel prägen unsere Marktposition: erstens die Verfügung über Millionen Tonnen gesicherte Sand- und Kiesvorräte, zweitens der Ausbau der Wertschöpfung über zertifizierte Mischanlage und Recycling, drittens die Hebung von Synergien entlang der gesamten Wertschöpfungskette.
+            Drei Hebel prägen unsere Marktposition: erstens die Verfügung über Mio. Tonnen gesicherte Sand- und Kiesvorräte, zweitens der Ausbau der Wertschöpfung über zertifizierte Mischanlage und Recycling, drittens die Hebung von Synergien entlang der gesamten Wertschöpfungskette.
           </p>
           <p>
             Rahmenbetriebsplan über Generationen hinweg genehmigt, Wasserrecht gesichert.

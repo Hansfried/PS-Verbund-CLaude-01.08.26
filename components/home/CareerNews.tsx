@@ -33,7 +33,7 @@ export default function CareerNews() {
               Wachse mit einer Gruppe, die wächst.
             </h2>
             <p className="text-gray-500 leading-relaxed mb-8 max-w-lg">
-              Ob Berufseinsteiger, Fachkraft oder Führungskraft — bei uns findest du einen sicheren Arbeitsplatz mit echten Entwicklungsperspektiven in einem wachsenden Unternehmen.
+              Ob Berufseinsteiger, Fachkraft oder Führungskraft, bei uns findest du einen sicheren Arbeitsplatz mit echten Entwicklungsperspektiven in einem wachsenden Unternehmen.
             </p>
             <Link
               href="/karriere"

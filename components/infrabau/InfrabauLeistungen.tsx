@@ -12,7 +12,7 @@ const prozesskette = [
   },
   {
     titel: "Saugbagger",
-    text: "Elektrisch betrieben — emissionsarmer Nassabbau direkt im entstehenden See.",
+    text: "Elektrisch betrieben, emissionsarmer Nassabbau direkt im entstehenden See.",
   },
   {
     titel: "Spülfeld",

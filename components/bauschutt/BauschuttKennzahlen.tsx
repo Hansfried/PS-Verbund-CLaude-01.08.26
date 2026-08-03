@@ -32,7 +32,7 @@ const kennzahlen = [
     display: null,
     countTarget: 2026,
     einheit: "PLANFESTSTELLUNG ERWARTET",
-    description: "Verfahren seit 2013 — Antrag, Auslegung und Prüfung vollständig durchlaufen",
+    description: "Verfahren seit 2013, Antrag, Auslegung und Prüfung vollständig durchlaufen",
   },
   {
     display: null,

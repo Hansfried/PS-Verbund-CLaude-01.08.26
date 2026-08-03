@@ -32,7 +32,7 @@ const marktStats = [
   {
     value: "151.300 t/a",
     label: "Bedarfsprognose im Einzugsgebiet",
-    description: "Über sechs Landkreise im Radius von bis zu 70 km — deutlich über unserer Jahreskapazität.",
+    description: "Über sechs Landkreise im Radius von bis zu 70 km, deutlich über unserer Jahreskapazität.",
   },
 ]
 
@@ -91,7 +91,7 @@ export default function BauschuttOverview() {
           className="max-w-2xl space-y-4 text-gray-400 leading-relaxed mb-12"
         >
           <p>
-            Der ausgebeutete Kiessandtagebau Luggendorf wird zur einzigen DK-I-Mineralstoffdeponie im Umkreis von ca. 100 km umgenutzt — ohne nennenswerte Veränderung des äußeren Erscheinungsbildes der Landschaft.
+            Der ausgebeutete Kiessandtagebau Luggendorf wird zur einzigen DK-I-Mineralstoffdeponie im Umkreis von ca. 100 km umgenutzt, ohne nennenswerte Veränderung des äußeren Erscheinungsbildes der Landschaft.
           </p>
           <p>
             Errichtung und Betrieb erfolgen vollständig nach DepV Anhang 1: Basisabdichtung, Sickerwassermanagement und Rekultivierung sind fester Bestandteil des technischen Konzepts.
@@ -107,7 +107,7 @@ export default function BauschuttOverview() {
           className="mb-12"
         >
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#a0c6e3] mb-6">
-            ▲&nbsp;&nbsp;MARKT — STRUKTURELLE UNTERVERSORGUNG
+            ▲&nbsp;&nbsp;MARKT. STRUKTURELLE UNTERVERSORGUNG
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {marktStats.map(({ value, label, description }, i) => (

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Script from "next/script"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 
@@ -8,25 +9,28 @@ const ease = [0.16, 1, 0.3, 1] as const
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen min-h-[640px] overflow-hidden -mt-16 pt-16 nav:-mt-[120px] nav:pt-[120px] bg-black">
+    <section className="relative w-full h-[100dvh] min-h-[640px] overflow-hidden -mt-16 pt-16 nav:-mt-[120px] nav:pt-[120px] bg-black">
       {/* Vollflächiges Hintergrundvideo */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div data-video-id="62140" className="absolute inset-0 z-0 overflow-hidden">
         <iframe
-          src="https://app.vidzflow.com/v/eBsQ5hFcH2?dq=576&ap=true&muted=true&loop=true&ctp=false&bv=false&piv=false&playsinline=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
-          title="Sequenz 01"
+          src="https://app.vidzflow.com/v/MeLN4YeV6M?dq=original&ap=true&muted=true&loop=true&ctp=false&bv=false&piv=true&playsinline=false&bc=%23ffffff&controls=fullscreen"
+          title="PS Kieswerke - Image Film [cuttet neu]"
           frameBorder={0}
           scrolling="no"
           allow="fullscreen"
           className="absolute top-1/2 left-1/2 pointer-events-none -translate-x-1/2 -translate-y-1/2"
-          style={{ width: "100vw", height: "56.25vw", minWidth: "177.78vh", minHeight: "100vh" }}
+          style={{ width: "102vw", height: "42.71vw", minWidth: "243.58dvh", minHeight: "102dvh" }}
         />
         {/* Ruhiger Verlauf statt hartem Overlay — nur so viel Kontrast wie für den Text nötig */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
       </div>
+      <Script id="hero-video-autoplay" strategy="afterInteractive">
+        {`window.addEventListener("message", function(e) {if (!e.origin.includes("vidzflow")) {return;}if (e.data.eventType === "videoReady") {new IntersectionObserver((entries, observer) => {entries.forEach(entry => {if (entry.isIntersecting && entry.target.getAttribute("data-video-id") === String(e.data.videoId)) {let iframe = entry.target.querySelector("iframe");if (iframe) {iframe.contentWindow.postMessage("playerPlay", "*");observer.unobserve(entry.target);}}});}).observe(document.querySelector("div[data-video-id=\\"" + e.data.videoId + "\\"]"));}});`}
+      </Script>
 
       {/* Inhalt — ein Gedanke, klar gesetzt, viel Luft */}
       <div className="relative z-10 flex h-full w-full flex-col justify-end">
-        <div className="mx-auto w-full max-w-[1400px] px-6 pb-16 sm:px-10 sm:pb-20 lg:px-16 lg:pb-24">
+        <div className="mx-auto w-full max-w-[1400px] px-6 pb-[114px] sm:px-10 sm:pb-20 lg:px-16 lg:pb-24">
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
@@ -47,7 +51,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 max-w-md text-base font-light leading-relaxed text-white/70 sm:text-lg">
-              Vier Unternehmen, eine Haltung — vom Rohstoff bis zur fertigen Straße. Norddeutscher Bau aus einer Hand.
+              Partnerschaftlich zum Erfolg für Brandenburg, Schleswig-Holstein, Mecklenburg-Vorpommern.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">

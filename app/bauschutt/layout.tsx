@@ -26,8 +26,10 @@ export default function BauschuttLayout({
 }>) {
   // Bewusste Ausnahme: force-dynamic macht dies zu einer echten Server-Anfrage-Prüfung
   // (kein eingefrorener Build-Zeitpunkt, keine Client-Hydration-Inkonsistenz möglich).
+  // In der lokalen Dev-Umgebung wird die Sperre übersprungen, damit der fertige Content
+  // getestet werden kann, ohne die Live-Sperre bis zum Launch-Datum zu beeinflussen.
   // eslint-disable-next-line react-hooks/purity
-  if (Date.now() < LAUNCH_DATE.getTime()) {
+  if (process.env.NODE_ENV === "production" && Date.now() < LAUNCH_DATE.getTime()) {
     return (
       <div className="flex-1 flex flex-col pt-20">
         <BauschuttNavbar />

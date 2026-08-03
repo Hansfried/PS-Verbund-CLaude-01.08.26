@@ -64,7 +64,7 @@ export default function BauschuttHero() {
             transition={{ duration: 0.6, delay: 0.4, ease }}
             className="text-sm text-white/90 max-w-xl leading-relaxed"
           >
-            Die PS Bauschutt GmbH entwickelt am Standort Groß Pankow / Landkreis Prignitz eine Mineralstoffdeponie der Klasse DK I — errichtet im Restloch des ausgebeuteten Kiessandtagebaus Luggendorf, ohne nennenswerte Veränderung des äußeren Landschaftsbildes.
+            Die PS Bauschutt GmbH entwickelt am Standort Groß Pankow / Landkreis Prignitz eine Mineralstoffdeponie der Klasse DK I, errichtet im Restloch des ausgebeuteten Kiessandtagebaus Luggendorf, ohne nennenswerte Veränderung des äußeren Landschaftsbildes.
           </motion.p>
         </div>
 

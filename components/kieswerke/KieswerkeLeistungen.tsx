@@ -31,7 +31,7 @@ const wertschoepfungskette = [
     einsatz: ["6x Radlader", "11x Bagger", "22x LKW"],
   },
   {
-    titel: "Gesteinskörnung — Herstellung",
+    titel: "Gesteinskörnung, Herstellung",
     text: "Das Material wird gebrochen und gewaschen und über Förderbänder nach Körnung sortiert.",
     einsatz: ["4x Brechanlagen", "1x Waschanlage"],
   },
@@ -41,7 +41,7 @@ const wertschoepfungskette = [
     einsatz: ["4x Brechanlagen", "1x Radlader"],
   },
   {
-    titel: "Gesteinskörnung — Transport",
+    titel: "Gesteinskörnung, Transport",
     text: "Ein Radlader belädt einen Lastkraftwagen in Rekordzeit. Dieser wird gewogen und mit dem passenden Lieferschein zu seinem Ziel geschickt.",
     einsatz: [
       "22 Lkw",

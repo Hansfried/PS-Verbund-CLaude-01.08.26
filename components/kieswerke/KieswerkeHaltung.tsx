@@ -72,7 +72,7 @@ export default function KieswerkeHaltung() {
               KLARE STRUKTUREN.
             </h2>
             <p className="text-gray-500 leading-relaxed max-w-sm mb-8">
-              Seit über 13 Jahren sind wir mitverantwortlich für den Deichbau, Windenergie-Infrastrukturprojekte und den Bau der A14. Dabei sind wir organisch gewachsen — und wachsen bis heute weiter. Wir profitieren von einem etablierten Kundenstamm sowie starken Partnern der privaten und der öffentlichen Hand.
+              Seit über 13 Jahren sind wir mitverantwortlich für den Deichbau, Windenergie-Infrastrukturprojekte und den Bau der A14. Dabei sind wir organisch gewachsen. Und wachsen bis heute weiter. Wir profitieren von einem etablierten Kundenstamm sowie starken Partnern der privaten und der öffentlichen Hand.
             </p>
             <div className="grid grid-cols-2 gap-3 max-w-sm">
               <div className="relative aspect-[4/3] overflow-hidden rounded-br-[2rem]">

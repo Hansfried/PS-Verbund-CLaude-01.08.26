@@ -64,7 +64,7 @@ export default function BauschuttStandort() {
           transition={{ duration: 0.6, ease }}
           className="text-gray-400 max-w-2xl leading-relaxed mb-12"
         >
-          Der Standort liegt im Landkreis Prignitz, ca. 8 km südwestlich von Pritzwalk. Das Einzugsgebiet umfasst sechs Landkreise im Radius von bis zu 70 km — die nächste DK-I-Deponie liegt über 100 km entfernt.
+          Der Standort liegt im Landkreis Prignitz, ca. 8 km südwestlich von Pritzwalk. Das Einzugsgebiet umfasst sechs Landkreise im Radius von bis zu 70 km. Die nächste DK-I-Deponie liegt über 100 km entfernt.
         </motion.p>
 
         {/* Two-column: Konkurrenzdeponien left, Fachgenehmigungen right */}

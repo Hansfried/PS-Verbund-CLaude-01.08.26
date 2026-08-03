@@ -65,7 +65,7 @@ export default function ImpressumContent() {
       </p>
       <p className="text-gray-500 leading-relaxed mb-12">
         &bdquo;PS Verbund&ldquo; ist dabei lediglich der Name, unter dem die nachfolgend aufgeführten Gesellschaften
-        gemeinsam auftreten — keine eigenständige Gesellschaft. Dach der Gruppe ist die PS Holding GmbH.
+        gemeinsam auftreten, keine eigenständige Gesellschaft. Dach der Gruppe ist die PS Holding GmbH.
       </p>
 
       <div className="space-y-12">

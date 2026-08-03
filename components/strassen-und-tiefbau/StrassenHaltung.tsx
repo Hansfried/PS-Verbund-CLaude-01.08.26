@@ -71,7 +71,7 @@ export default function StrassenHaltung() {
               VERLÄSSLICH.
             </h2>
             <p className="text-gray-500 leading-relaxed max-w-sm mb-8">
-              Als Straßen- und Tiefbau-Spezialist im PS Verbund übernehmen wir Bauvorhaben für Kommunen, Industrie und private Auftraggeber — von der Planung bis zur Abnahme. Kurze Wege zu Rohstoff und Recycling aus dem eigenen Verbund machen uns schnell und flexibel.
+              Als Straßen- und Tiefbau-Spezialist im PS Verbund übernehmen wir Bauvorhaben für Kommunen, Industrie und private Auftraggeber, von der Planung bis zur Abnahme. Kurze Wege zu Rohstoff und Recycling aus dem eigenen Verbund machen uns schnell und flexibel.
             </p>
             <div className="relative aspect-[4/3] max-w-sm overflow-hidden rounded-br-[2rem]">
               <Image src="/gesellschaften-team.jpg" alt="Team PS Straßen und Tiefbau" fill className="object-cover" />

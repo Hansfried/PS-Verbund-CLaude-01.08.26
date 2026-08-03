@@ -23,7 +23,7 @@ export default function Geography() {
               Brandenburg. Mecklenburg-Vorpommern. Sachsen-Anhalt.
             </p>
             <p className="text-gray-500 leading-relaxed">
-              Das sind unsere Märkte — und unser Zuhause. Kurze Wege, lokales Wissen und jahrzehntelange Beziehungen machen uns zum verlässlichsten Partner in der Region.
+              Das sind unsere Märkte. Und unser Zuhause. Kurze Wege, lokales Wissen und jahrzehntelange Beziehungen machen uns zum verlässlichsten Partner in der Region.
             </p>
           </motion.div>
 

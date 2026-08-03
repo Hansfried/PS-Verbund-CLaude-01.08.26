@@ -15,10 +15,10 @@ export default function KontaktPage() {
           Sprechen wir.
         </h1>
         <p className="text-gray-500 leading-relaxed max-w-2xl mb-4">
-          Schreiben Sie uns über das Formular — wir melden uns zeitnah bei Ihnen zurück.
+          Schreiben Sie uns über das Formular. Wir melden uns zeitnah bei Ihnen zurück.
         </p>
         <p className="text-gray-400 text-sm leading-relaxed max-w-2xl mb-16">
-          Dieses Formular gilt für alle vier Gesellschaften der PS Gruppe — Ihre Anfrage wird intern automatisch
+          Dieses Formular gilt für alle vier Gesellschaften der PS Gruppe. Ihre Anfrage wird intern automatisch
           an den jeweils zuständigen Ansprechpartner weitergeleitet.
         </p>
 

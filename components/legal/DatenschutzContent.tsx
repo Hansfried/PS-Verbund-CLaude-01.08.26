@@ -14,7 +14,7 @@ export default function DatenschutzContent() {
         <p className="text-sm text-gray-600 leading-relaxed">
           Verantwortliche im Sinne des Art. 4 Nr. 7 DSGVO sind die PS Kieswerke GmbH, die PS Bauschutt GmbH, die
           PS Infrabau GmbH und die PS Straßen und Tiefbau GmbH, jeweils Reetzer Chaussee 1, 19348 Perleberg OT
-          Groß Buchholz (PS Straßen und Tiefbau GmbH: Lenzenerstraße 39, 19322 Wittenberge) — Kontaktdaten der
+          Groß Buchholz (PS Straßen und Tiefbau GmbH: Lenzenerstraße 39, 19322 Wittenberge). Kontaktdaten der
           jeweils zuständigen Gesellschaft finden Sie im{" "}
           <a href="/impressum" className="underline hover:text-[#a8c200] transition-colors">Impressum</a>.
         </p>

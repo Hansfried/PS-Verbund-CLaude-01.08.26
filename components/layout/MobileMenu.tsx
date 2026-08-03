@@ -81,7 +81,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                         width={46}
                         className={[
                           "h-8 w-auto object-contain transition-all duration-300",
-                          isActive ? "opacity-100 grayscale-0" : "opacity-50 grayscale hover:opacity-90 hover:grayscale-0",
+                          isActive ? "opacity-100" : "opacity-80 hover:opacity-100",
                         ].join(" ")}
                       />
                     </Link>

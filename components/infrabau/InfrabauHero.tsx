@@ -58,7 +58,7 @@ export default function InfrabauHero() {
             transition={{ duration: 0.6, delay: 0.4, ease }}
             className="text-sm text-white/90 max-w-xl leading-relaxed"
           >
-            Die PS Infrabau GmbH gewinnt am Standort Karstädt OT Stavenow rund 3,08 Mio. Tonnen Kiessand als Seitenentnahme direkt für den Bau der Bundesautobahn A14 — mit kurzen Transportwegen, geschlossenem Wasserkreislauf und minimaler Umweltbelastung.
+            Die PS Infrabau GmbH gewinnt am Standort Karstädt OT Stavenow rund 3,08 Mio. Tonnen Kiessand als Seitenentnahme direkt für den Bau der Bundesautobahn A14, mit kurzen Transportwegen, geschlossenem Wasserkreislauf und minimaler Umweltbelastung.
           </motion.p>
         </div>
 

@@ -35,7 +35,7 @@ const kennzahlen = [
     description: "Planungssicherheit über Generationen hinweg",
   },
   {
-    display: "Millionen Tonnen",
+    display: "Mio. Tonnen",
     countTarget: null,
     einheit: "GESICHERTE VORRÄTE",
     description: "Bestätigte Vorratsbasis aus eigenem Abbaugebiet",

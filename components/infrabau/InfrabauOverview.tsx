@@ -90,7 +90,7 @@ export default function InfrabauOverview() {
           className="max-w-2xl space-y-4 text-gray-400 leading-relaxed mb-12"
         >
           <p>
-            Die PS Infrabau GmbH verantwortet am Standort Karstädt OT Stavenow (Landkreis Prignitz, Brandenburg) die Seitenentnahme Stavenow — eine Kiessandgewinnung, deren gesamtes Volumen direkt in den Ausbau der Bundesautobahn A14 fließt.
+            Die PS Infrabau GmbH verantwortet am Standort Karstädt OT Stavenow (Landkreis Prignitz, Brandenburg) die Seitenentnahme Stavenow, eine Kiessandgewinnung, deren gesamtes Volumen direkt in den Ausbau der Bundesautobahn A14 fließt.
           </p>
           <p>
             Der Standort liegt rund 0,5 km von der A14-Trasse entfernt und ist damit eine der direktesten Materialquellen für dieses Infrastrukturprojekt in der Region.

@@ -11,7 +11,7 @@ const prinzipien = [
   {
     nr: "01",
     titel: "ROHSTOFF",
-    text: "Direkte Gewinnung dort, wo der Bedarf entsteht — kurze Wege statt externem Zukauf.",
+    text: "Direkte Gewinnung dort, wo der Bedarf entsteht, kurze Wege statt externem Zukauf.",
   },
   {
     nr: "02",
@@ -53,7 +53,7 @@ export default function InfrabauHaltung() {
               VERANTWORTUNG.
             </h2>
             <p className="text-gray-500 leading-relaxed max-w-sm mb-8">
-              Die PS Infrabau GmbH bringt Rohstoffgewinnung und Infrastrukturprojekte zusammen — aktuell mit der Seitenentnahme Stavenow für den Bau der A14. Als Teil des PS Verbunds profitieren wir von enger Abstimmung mit unseren Schwestergesellschaften entlang der gesamten Wertschöpfungskette.
+              Die PS Infrabau GmbH bringt Rohstoffgewinnung und Infrastrukturprojekte zusammen. Aktuell mit der Seitenentnahme Stavenow für den Bau der A14. Als Teil des PS Verbunds profitieren wir von enger Abstimmung mit unseren Schwestergesellschaften entlang der gesamten Wertschöpfungskette.
             </p>
             <ImagePlaceholder label="Team & Standort Stavenow" className="aspect-[4/3] max-w-sm" />
           </motion.div>

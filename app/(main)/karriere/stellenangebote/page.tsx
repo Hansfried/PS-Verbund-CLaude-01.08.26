@@ -15,7 +15,7 @@ export default function StellenangebotePage() {
           Alle Jobs.
         </h1>
         <p className="text-gray-500 leading-relaxed max-w-2xl mb-16">
-          Diese Berufsfelder gibt es in unserem Team. Klicke auf eine Bezeichnung für mehr Details — bei Interesse
+          Diese Berufsfelder gibt es in unserem Team. Klicke auf eine Bezeichnung für mehr Details. Bei Interesse
           freuen wir uns schon jetzt über eine Initiativbewerbung.
         </p>
 

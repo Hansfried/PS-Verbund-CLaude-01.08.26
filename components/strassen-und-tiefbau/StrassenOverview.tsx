@@ -72,10 +72,10 @@ export default function StrassenOverview() {
           className="max-w-2xl space-y-4 text-gray-400 leading-relaxed mb-12"
         >
           <p>
-            Die PS Straßen und Tiefbau GmbH ist der Straßen- und Tiefbau-Spezialist im PS Verbund — von der ersten Erdbewegung bis zur fertigen Oberfläche.
+            Die PS Straßen und Tiefbau GmbH ist der Straßen- und Tiefbau-Spezialist im PS Verbund, von der ersten Erdbewegung bis zur fertigen Oberfläche.
           </p>
           <p>
-            Als Teil eines norddeutschen Bauverbunds aus Rohstoffgewinnung, Straßen- und Tiefbau, Infrastruktur und Recycling profitieren wir von kurzen Wegen zu Baustoffen und Maschinen — und geben diesen Vorteil an unsere Auftraggeber weiter.
+            Als Teil eines norddeutschen Bauverbunds aus Rohstoffgewinnung, Straßen- und Tiefbau, Infrastruktur und Recycling profitieren wir von kurzen Wegen zu Baustoffen und Maschinen. Und geben diesen Vorteil an unsere Auftraggeber weiter.
           </p>
         </motion.div>
 
