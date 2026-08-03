@@ -108,7 +108,7 @@ export const mainNavItems: NavItem[] = [
       },
       {
         label: 'Karriere im PS Verbund',
-        href: '/karriere',
+        href: '/karriere/stellenangebote',
         children: [
           { label: 'Bewerbungstipps', href: '/karriere/bewerbungstipps' },
           { label: 'Für Berufserfahrene', href: '/karriere/berufserfahrene' },

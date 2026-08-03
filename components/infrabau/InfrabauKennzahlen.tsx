@@ -69,7 +69,7 @@ export default function InfrabauKennzahlen() {
               transition={{ duration: 0.6, delay: i * 0.08, ease }}
               className="border-t border-[#2a2a2a] py-8 flex flex-col md:flex-row md:items-baseline gap-6 md:gap-16"
             >
-              <div className="flex items-baseline gap-2 shrink-0 min-w-[180px]">
+              <div className="flex items-baseline gap-2 min-w-0 md:shrink-0 md:min-w-[180px]">
                 <span className="text-base text-[#f97316] font-bold">▲</span>
                 <p className="text-6xl md:text-8xl font-black text-[#f97316] leading-none tracking-tight">
                   {display}

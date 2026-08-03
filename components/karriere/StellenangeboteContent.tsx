@@ -9,15 +9,68 @@ type JobDetail = {
   voraussetzung?: string
 }
 
-// Tätigkeitsfeld/Voraussetzung noch nicht befüllt — Platzhalter bis der Nutzer die Texte liefert.
-const jobDetails: Record<string, JobDetail> = {}
+const jobDetails: Record<string, JobDetail> = {
+  "LKW-Fahrer": {
+    taetigkeitsfeld:
+      "Sie bewegen Tonnen! Dabei bleiben Sie im regionalen Umkreis von 70 km. Ihr Fahrzeug ist ein Volvo FM mit bis zu 560 PS.",
+    voraussetzung: "Führerschein der Klasse CE",
+  },
+  "Maschinist (Bagger / Radlader)": {
+    taetigkeitsfeld:
+      "Sie führen Raupenbagger mit einem Einsatzgewicht von bis zu 94 Tonnen und einem Löffelfassungsvermögen von 3,9–7 m³. Je nach Einsatzgebiet und Können steigen Sie auch auf Radlader, Walzen und Raupen um.",
+    voraussetzung: "Erfahrung im Umgang mit schweren Maschinen",
+  },
+  "Werkstattmitarbeiter": {
+    taetigkeitsfeld:
+      "Sie reparieren große Maschinen und LKWs und bleiben dabei überwiegend stationär in der Werkstatt. Es kann jedoch vorkommen, dass auch direkt auf der Baustelle repariert wird.",
+    voraussetzung:
+      "Erfahrung im Umgang mit schweren Maschinen sowie eine abgeschlossene Ausbildung als Landmaschinenschlosser, Baumaschinenmechatroniker oder Nutzfahrzeugmechatroniker.",
+  },
+  "Werkstattmeister": {
+    taetigkeitsfeld:
+      "Sie organisieren und leiten die Werkstatt sowie die Wartung und Reparatur des gesamten Maschinen- und Fuhrparks. Sie stellen sicher, dass Baumaschinen, Fahrzeuge und Anlagen jederzeit sicher, zuverlässig und wirtschaftlich einsatzbereit sind, und koordinieren dabei Mitarbeitende, Ersatzteilbeschaffung und externe Dienstleister. Darüber hinaus überwachen Sie die Einhaltung von Arbeitsschutz- und Sicherheitsvorschriften und optimieren die Werkstattabläufe.",
+    voraussetzung:
+      "Eine abgeschlossene Berufsausbildung, z. B. als Land- und Baumaschinenmechatroniker, Kfz-Mechatroniker (Nutzfahrzeuge), Industriemechaniker oder in einem vergleichbaren technischen Beruf. Eine Weiterbildung zum Meister (z. B. Industriemeister Metall oder Landmaschinenmechanikermeister) oder eine vergleichbare Qualifikation. Mehrjährige Berufserfahrung in der Wartung und Reparatur von Baumaschinen, Nutzfahrzeugen oder Industrieanlagen. Erfahrung in der Mitarbeiterführung sowie organisatorische Fähigkeiten. Gute Kenntnisse in Mechanik, Hydraulik, Pneumatik, Elektrik und moderner Diagnosetechnik. Selbstständige, verantwortungsbewusste und lösungsorientierte Arbeitsweise. Kenntnisse der Arbeitssicherheits- und Unfallverhütungsvorschriften. Führerschein der Klasse B; je nach Betrieb sind weitere Führerscheinklassen (z. B. C/CE) von Vorteil.",
+  },
+  "Brecheranlagenführer": {
+    taetigkeitsfeld:
+      "Sie bedienen, überwachen und steuern Brech-, Sieb- und Förderanlagen zur Aufbereitung von Kies, Sand und Gestein. Sie sorgen für einen störungsfreien Produktionsablauf, führen regelmäßige Kontrollen sowie kleinere Wartungs- und Instandhaltungsarbeiten durch und beheben einfache Störungen. Zudem achten Sie auf die Einhaltung der Qualitäts-, Sicherheits- und Umweltvorschriften.",
+    voraussetzung:
+      "Eine zuverlässige Arbeitsweise sowie Erfahrung im Umgang mit Maschinen und Anlagen sind von Vorteil. Teamfähigkeit, Verantwortungsbewusstsein und die Bereitschaft zur Arbeit im Freien runden Ihr Profil ab.",
+  },
+  "Kaufmännischer Angestellter": {
+    taetigkeitsfeld:
+      "Sie übernehmen allgemeine kaufmännische und administrative Aufgaben und unterstützen die täglichen Abläufe im Unternehmen. Dazu gehören die Bearbeitung von Aufträgen, Rechnungen und Schriftverkehr, die Pflege von Stammdaten sowie die Kommunikation mit Kunden, Lieferanten und Geschäftspartnern. Zudem wirken Sie bei der Organisation des Bürobetriebs mit und unterstützen die verschiedenen Fachbereiche.",
+    voraussetzung:
+      "Sie verfügen über eine abgeschlossene kaufmännische Berufsausbildung, beispielsweise als Kaufmann/Kauffrau für Büromanagement oder Industriekaufmann/-frau, oder über eine vergleichbare Qualifikation. Sie arbeiten selbstständig, strukturiert und zuverlässig und besitzen gute Kenntnisse in den gängigen MS-Office-Anwendungen. Teamfähigkeit, Kommunikationsstärke sowie ein freundliches und serviceorientiertes Auftreten runden Ihr Profil ab.",
+  },
+  "Bauleiter": {
+    taetigkeitsfeld:
+      "Sie planen, koordinieren und überwachen Bauprojekte von der Vorbereitung bis zur erfolgreichen Fertigstellung. Dabei steuern Sie den Personaleinsatz, koordinieren Nachunternehmer und stellen die Einhaltung von Terminen, Kosten, Qualitätsstandards sowie Arbeitssicherheitsvorschriften sicher. Zudem sind Sie Ansprechpartner für Auftraggeber, Behörden und Projektbeteiligte und dokumentieren den Baufortschritt.",
+    voraussetzung:
+      "Sie verfügen über eine abgeschlossene Ausbildung mit Weiterbildung zum Bautechniker oder Meister bzw. ein abgeschlossenes Studium im Bauingenieurwesen oder einer vergleichbaren Fachrichtung. Berufserfahrung in der Bauleitung, Organisationstalent, Durchsetzungsvermögen sowie eine selbstständige und verantwortungsbewusste Arbeitsweise zeichnen Sie aus. Gute Kommunikationsfähigkeiten, wirtschaftliches Denken und ein sicherer Umgang mit gängiger Büro- und Bausoftware sind von Vorteil.",
+  },
+  "Polier": {
+    taetigkeitsfeld:
+      "Sie organisieren und überwachen die täglichen Arbeitsabläufe auf der Baustelle und sorgen für eine termingerechte, qualitativ hochwertige und wirtschaftliche Ausführung der Bauarbeiten. Dabei koordinieren Sie Mitarbeitende, Nachunternehmer sowie den Einsatz von Maschinen und Materialien und achten auf die Einhaltung von Arbeitssicherheits- und Qualitätsstandards. Zudem arbeiten Sie eng mit der Bauleitung zusammen und dokumentieren den Baufortschritt.",
+    voraussetzung:
+      "Sie verfügen über eine abgeschlossene Ausbildung im Baugewerbe sowie eine Weiterbildung zum geprüften Polier oder eine vergleichbare Qualifikation. Mehrjährige Berufserfahrung, Führungsstärke, Organisationstalent und eine selbstständige Arbeitsweise zeichnen Sie aus. Verantwortungsbewusstsein, Durchsetzungsvermögen sowie Kenntnisse der geltenden Sicherheitsvorschriften runden Ihr Profil ab.",
+  },
+  "Bauhelfer": {
+    taetigkeitsfeld:
+      "Sie unterstützen das Baustellenteam bei allgemeinen Bauarbeiten sowie bei der Vorbereitung und Einrichtung von Baustellen. Dazu gehören Materialtransport, einfache handwerkliche Tätigkeiten, Aufräum- und Reinigungsarbeiten sowie die Unterstützung beim Bedienen von Maschinen und Geräten. Sie tragen dazu bei, dass die Arbeiten sicher, effizient und termingerecht ausgeführt werden.",
+    voraussetzung:
+      "Sie verfügen idealerweise über erste praktische Erfahrungen im Baugewerbe, eine Ausbildung ist jedoch nicht zwingend erforderlich. Handwerkliches Geschick, körperliche Belastbarkeit sowie eine zuverlässige und teamorientierte Arbeitsweise zeichnen Sie aus. Führerschein der Klasse B ist von Vorteil, ebenso die Bereitschaft zur Arbeit im Freien.",
+  },
+}
 
 const wirBieten = [
+  "Hohe Vielfalt",
+  "Modernes Arbeitsumfeld",
+  "Maschinenpark auf neuestem Stand",
+  "Attraktives Urlaubsmodell",
   "Unbefristetes Arbeitsverhältnis in Vollzeit",
   "Leistungsgerechte Vergütung",
-  "Moderne Maschinen",
-  "Ein starkes Team",
-  "Aufstiegschancen",
 ]
 
 type Berufsfeld = {
@@ -29,22 +82,20 @@ type Berufsfeld = {
 const berufsfelder: Berufsfeld[] = [
   {
     gesellschaft: "PS Kieswerke GmbH",
-    email: "bewerben-kieswerke@psverbund.de",
+    email: "Bewerbung-kieswerke@psverbund.de",
     jobs: [
       "LKW-Fahrer",
       "Maschinist (Bagger / Radlader)",
       "Werkstattmitarbeiter",
       "Werkstattmeister",
       "Brecheranlagenführer",
-      "Bauleiter",
-      "Disponent",
       "Kaufmännischer Angestellter",
     ],
   },
   {
     gesellschaft: "PS Straßen und Tiefbau GmbH",
-    email: "info-strassenundtiefbau@psverbund.de",
-    jobs: ["Maschinist (Bagger / Radlader)", "Bauleiter", "Polier", "LKW-Fahrer", "Bauarbeiter"],
+    email: "Bewerbung-kieswerke@psverbund.de",
+    jobs: ["Maschinist (Bagger / Radlader)", "Bauleiter", "Polier", "LKW-Fahrer", "Bauhelfer"],
   },
 ]
 
