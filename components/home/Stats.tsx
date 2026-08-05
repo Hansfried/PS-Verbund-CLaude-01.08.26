@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion"
 
 const stats = [
   { value: 1879, suffix: "+", label: "Ausgeführte Projekte" },
-  { value: 12, suffix: " Mio. t", label: "Jahresleistung" },
+  { value: 5000, suffix: "+ t", label: "Tagesliefermengen" },
   { value: 85, suffix: "+", label: "Mitarbeiter" },
   { value: 13, suffix: "", label: "Jahre im Wachstum" },
 ]

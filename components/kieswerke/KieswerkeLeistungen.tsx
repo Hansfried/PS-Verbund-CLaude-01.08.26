@@ -38,14 +38,13 @@ const wertschoepfungskette = [
   {
     titel: "Mischplatz",
     text: "Herstellung von RC-Beton, Schottertragschicht, Frostschutzschicht.",
-    einsatz: ["4x Brechanlagen", "1x Radlader"],
+    einsatz: ["2x Brecher", "4x Siebanlagen"],
   },
   {
     titel: "Gesteinskörnung, Transport",
     text: "Ein Radlader belädt einen Lastkraftwagen in Rekordzeit. Dieser wird gewogen und mit dem passenden Lieferschein zu seinem Ziel geschickt.",
     einsatz: [
       "22 Lkw",
-      "Mit Subunternehmen erhöhen wir unsere Schlagkraft auf bis zu 50 LKW",
       "1x Waage",
       "2x Radlader",
       "1x Bagger",

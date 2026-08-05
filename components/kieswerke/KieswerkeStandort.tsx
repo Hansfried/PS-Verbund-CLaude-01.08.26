@@ -7,11 +7,11 @@ const ease = [0.22, 1, 0.36, 1] as const
 
 // ■ as lime square marker — matches PDF style
 const lieferradius = [
-  { ort: "ROSTOCK", km: "km folgt" },
+  { ort: "ROSTOCK", km: "~120 km" },
   { ort: "KARSTÄDT", km: "~12 km" },
   { ort: "MAGDEBURG", km: "~60 km" },
-  { ort: "NEURUPPIN", km: "km folgt" },
-  { ort: "KYRITZ", km: "km folgt" },
+  { ort: "NEURUPPIN", km: "~60 km" },
+  { ort: "KYRITZ", km: "~50 km" },
   { ort: "GROß BUCHHOLZ / GOLMER BERG", km: "UNSER STANDORT", highlight: true },
 ]
 

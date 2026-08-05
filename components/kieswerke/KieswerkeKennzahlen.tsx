@@ -32,7 +32,7 @@ const kennzahlen = [
     display: "Generationen",
     countTarget: null,
     einheit: "GENEHMIGUNGSHORIZONT",
-    description: "Planungssicherheit über Generationen hinweg",
+    description: "Überdauert Generationen",
   },
   {
     display: "Mio. Tonnen",
@@ -56,7 +56,7 @@ const kennzahlen = [
     display: "22",
     countTarget: null,
     einheit: "EIGENE LKW",
-    description: "Mit Subunternehmen erhöhen wir unsere Schlagkraft auf bis zu 50 LKW",
+    description: "",
   },
 ]
 

@@ -70,9 +70,7 @@ export default function StrassenLeistungen() {
             ▲&nbsp;&nbsp;KERNLEISTUNGEN
           </p>
           <h2 className="text-5xl md:text-6xl font-black tracking-tight leading-none uppercase text-gray-900 max-w-3xl">
-            WIR SIND TREIBER DES
-            <br />
-            WINDENERGIEANLAGENBAUS.
+            WIR BAUEN ZUKUNFT.
           </h2>
         </motion.div>
 
