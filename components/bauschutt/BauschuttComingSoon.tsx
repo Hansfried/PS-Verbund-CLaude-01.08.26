@@ -10,9 +10,6 @@ export default function BauschuttComingSoon() {
       <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-6 max-w-xl">
         Die PS Bauschutt Website befindet sich im Aufbau.
       </h1>
-      <p className="text-gray-500 leading-relaxed max-w-md mb-2">
-        Sie können diese ab dem 10.08. einsehen.
-      </p>
       <p className="text-gray-500 leading-relaxed max-w-md mb-10">
         Mit freundlichen Grüßen<br />Ihr PS Team
       </p>

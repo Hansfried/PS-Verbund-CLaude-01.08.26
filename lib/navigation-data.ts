@@ -136,6 +136,10 @@ export const mainNavItems: NavItem[] = [
     ],
   },
   {
+    label: 'Regionale Empfehlungen',
+    href: '/regionale-empfehlungen',
+  },
+  {
     label: 'Kontakt',
     href: '/kontakt',
   },

@@ -11,25 +11,14 @@ export const metadata: Metadata = {
   description: "PS Bauschutt GmbH – Bauschutt-Recycling und Entsorgung.",
 }
 
-// Die reale Bauschutt-Seite bleibt im Code vollständig bestehen, ist aber bis zum
-// Launch-Datum nicht öffentlich erreichbar — stattdessen erscheint die Platzhalterseite.
-// force-dynamic verhindert, dass diese Prüfung einmalig beim Build eingefroren wird —
-// ohne das würde der Umschlag am 10.08. erst nach einem erneuten Deploy sichtbar.
-export const dynamic = "force-dynamic"
-
-const LAUNCH_DATE = new Date("2026-08-10T00:00:00")
-
+// Die reale Bauschutt-Seite bleibt im Code vollständig bestehen, ist aber öffentlich
+// nicht erreichbar — stattdessen erscheint die Platzhalterseite.
 export default function BauschuttLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  // Bewusste Ausnahme: force-dynamic macht dies zu einer echten Server-Anfrage-Prüfung
-  // (kein eingefrorener Build-Zeitpunkt, keine Client-Hydration-Inkonsistenz möglich).
-  // In der lokalen Dev-Umgebung wird die Sperre übersprungen, damit der fertige Content
-  // getestet werden kann, ohne die Live-Sperre bis zum Launch-Datum zu beeinflussen.
-  // eslint-disable-next-line react-hooks/purity
-  if (process.env.NODE_ENV === "production" && Date.now() < LAUNCH_DATE.getTime()) {
+  if (process.env.NODE_ENV === "production") {
     return (
       <div className="flex-1 flex flex-col pt-20">
         <BauschuttNavbar />
