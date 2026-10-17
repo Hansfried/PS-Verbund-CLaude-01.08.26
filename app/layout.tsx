@@ -32,6 +32,8 @@ export const metadata: Metadata = {
     "Die PS Verbund-Gruppe aus Perleberg: Kies, Sand und Splitt, Baustoff-Recycling, Straßen- und Tiefbau sowie Kabel- und Rohrleitungsbau in Brandenburg und Norddeutschland.",
   applicationName: SITE_NAME,
   formatDetection: { telephone: false },
+  // Google Search Console (URL-Präfix-Property https://psverbund.de) — die DNS-Zone liegt bei INWX.
+  verification: { google: "ySnEjBWYhc8ONBZSlmLBy4tLDLQR38aLcopxZP9tyuE" },
 };
 
 export default function RootLayout({
