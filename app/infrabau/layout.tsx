@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     template: "%s | PS Infrabau",
   },
   description: "PS Infrabau GmbH – Kabel- und Rohrleitungsbau sowie Tiefbauleistungen.",
+  // Öffentlich ist bisher nur die Platzhalterseite erreichbar — erst mit dem
+  // Launch der echten Seite indexieren lassen (und in app/sitemap.ts aufnehmen).
+  robots: { index: false, follow: true },
 }
 
 // Die reale Infrabau-Seite bleibt im Code vollständig bestehen, ist aber öffentlich

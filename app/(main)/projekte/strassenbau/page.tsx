@@ -1,12 +1,13 @@
-import type { Metadata } from "next"
 import ProjekteListe from "@/components/projekte/ProjekteListe"
 import ProjekteTabs from "@/components/projekte/ProjekteTabs"
 import { projekte } from "@/lib/projekte-data"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Straßenbau",
   description: "Projekte der PS Verbund-Gruppe im Bereich Straßenbau.",
-}
+  path: "/projekte/strassenbau",
+})
 
 export default function StrassenbauPage() {
   const gefiltert = projekte.filter((p) => p.kategorie === "strassenbau")

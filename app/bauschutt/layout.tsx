@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     template: "%s | PS Bauschutt",
   },
   description: "PS Bauschutt GmbH – Bauschutt-Recycling und Entsorgung.",
+  // Öffentlich ist bisher nur die Platzhalterseite erreichbar — erst mit dem
+  // Launch der echten Seite indexieren lassen (und in app/sitemap.ts aufnehmen).
+  robots: { index: false, follow: true },
 }
 
 // Die reale Bauschutt-Seite bleibt im Code vollständig bestehen, ist aber öffentlich

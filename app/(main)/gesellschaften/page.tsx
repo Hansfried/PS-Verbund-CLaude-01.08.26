@@ -1,10 +1,11 @@
-import type { Metadata } from "next"
 import Organigramm from "@/components/gesellschaften/Organigramm"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Gesellschaften",
   description: "Die Gesellschaften der PS Verbund-Gruppe im Überblick: Kieswerke, Straßen- und Tiefbau, Infrabau und Bauschutt.",
-}
+  path: "/gesellschaften",
+})
 
 export default function GesellschaftenPage() {
   return (

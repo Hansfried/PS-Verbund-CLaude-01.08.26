@@ -1,4 +1,5 @@
 import Link from "next/link"
+import CookieSettingsButton from "@/components/consent/CookieSettingsButton"
 
 const companies = [
   {
@@ -63,6 +64,7 @@ export default function Footer({ basePath = "" }: { basePath?: string }) {
             <Link href={`${basePath}/datenschutz`} className="text-xs text-gray-500 hover:text-white transition-colors">
               Datenschutz
             </Link>
+            <CookieSettingsButton className="text-xs text-gray-500 hover:text-white transition-colors" />
           </div>
         </div>
       </div>

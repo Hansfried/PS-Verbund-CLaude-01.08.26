@@ -1,10 +1,11 @@
-import type { Metadata } from "next"
 import RegionaleEmpfehlungenContent from "@/components/regionale-empfehlungen/RegionaleEmpfehlungenContent"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Regionale Empfehlungen",
   description: "Die PS Gruppe empfiehlt und unterstützt regionale Klein- und Handwerksunternehmen aus der Region.",
-}
+  path: "/regionale-empfehlungen",
+})
 
 export default function RegionaleEmpfehlungenPage() {
   return (

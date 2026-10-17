@@ -94,10 +94,29 @@ export default function DatenschutzContent() {
       </section>
 
       <section className="border-t border-gray-200 pt-8 mb-10">
-        <h2 className="text-lg font-bold text-gray-900 mb-3">7. Cookies und Analyse-Tools</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-3">7. Cookies und Webanalyse (Google Analytics)</h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-3">
+          Diese Website nutzt Google Analytics 4, einen Webanalysedienst der Google Ireland Limited, Gordon
+          House, Barrow Street, Dublin 4, Irland („Google“). Google Analytics wird ausschließlich geladen, wenn
+          Sie im Cookie-Banner ausdrücklich eingewilligt haben. Rechtsgrundlage ist Ihre Einwilligung gemäß
+          Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG.
+        </p>
+        <p className="text-sm text-gray-600 leading-relaxed mb-3">
+          Google Analytics setzt Cookies (z. B. „_ga“), mit denen Ihr Browser wiedererkannt wird, und erfasst
+          Informationen über Ihre Nutzung dieser Website, etwa aufgerufene Seiten, Verweildauer, verwendetes
+          Gerät und Browser sowie die ungefähre Herkunftsregion. IP-Adressen werden von Google Analytics 4
+          nicht gespeichert. Die Daten werden in unserem Auftrag verarbeitet, um die Nutzung der Website
+          auszuwerten und sie zu verbessern; wir haben mit Google einen Auftragsverarbeitungsvertrag
+          geschlossen. Eine Übermittlung in die USA ist möglich; Google ist unter dem EU-US Data Privacy
+          Framework zertifiziert. Die Daten werden nach 14 Monaten gelöscht. Werbefunktionen sind deaktiviert.
+        </p>
+        <p className="text-sm text-gray-600 leading-relaxed mb-3">
+          Ihre Einwilligung ist freiwillig und kann jederzeit mit Wirkung für die Zukunft über den Link
+          „Cookie-Einstellungen“ im Seitenfuß widerrufen werden. Ihre Entscheidung wird lokal in Ihrem Browser
+          gespeichert („ps-consent“), damit der Hinweis nicht bei jedem Besuch erneut erscheint.
+        </p>
         <p className="text-sm text-gray-600 leading-relaxed">
-          Diese Website setzt derzeit keine Cookies und keine Analyse- oder Tracking-Tools (z. B. Google
-          Analytics) ein.
+          Weitere Informationen: https://policies.google.com/privacy
         </p>
       </section>
 
@@ -105,7 +124,7 @@ export default function DatenschutzContent() {
         <h2 className="text-lg font-bold text-gray-900 mb-3">8. Änderung dieser Datenschutzerklärung</h2>
         <p className="text-sm text-gray-600 leading-relaxed">
           Wir passen diese Datenschutzerklärung an, sobald sich die Datenverarbeitung auf unserer Website
-          ändert, z. B. bei Einführung neuer Funktionen. Stand: 01.08.2026.
+          ändert, z. B. bei Einführung neuer Funktionen. Stand: 17.10.2026.
         </p>
       </section>
     </div>

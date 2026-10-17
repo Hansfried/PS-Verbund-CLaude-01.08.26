@@ -1,10 +1,11 @@
-import type { Metadata } from "next"
 import Image from "next/image"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Zertifikate",
   description: "Zertifikate und Güteüberwachung der PS Verbund-Gruppe.",
-}
+  path: "/gruppe/zertifikate",
+})
 
 const zertifikate = [
   {

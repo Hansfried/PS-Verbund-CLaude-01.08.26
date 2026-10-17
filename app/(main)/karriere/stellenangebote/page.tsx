@@ -1,10 +1,11 @@
-import type { Metadata } from "next"
 import StellenangeboteContent from "@/components/karriere/StellenangeboteContent"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Stellenangebote",
   description: "Aktuelle Stellenangebote der PS Verbund-Gruppe.",
-}
+  path: "/karriere/stellenangebote",
+})
 
 export default function StellenangebotePage() {
   return (

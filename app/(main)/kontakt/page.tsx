@@ -1,10 +1,11 @@
-import type { Metadata } from "next"
 import KontaktFormular from "@/components/kontakt/KontaktFormular"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Kontakt",
   description: "Kontaktieren Sie die PS Verbund-Gruppe.",
-}
+  path: "/kontakt",
+})
 
 export default function KontaktPage() {
   return (

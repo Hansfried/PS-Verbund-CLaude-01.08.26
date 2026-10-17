@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { SITE_NAME, SITE_URL } from "@/lib/seo";
+import CookieConsent from "@/components/consent/CookieConsent";
 
 const geistSans = localFont({
   src: "./fonts/geist-sans.woff2",
@@ -21,11 +23,15 @@ const montserrat = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "PS Verbund – Kieswerke, Straßen- und Tiefbau, Infrabau, Bauschutt",
+    default: "PS Verbund – Kieswerk, Recycling, Straßen- & Tiefbau in der Prignitz",
     template: "%s | PS Verbund",
   },
-  description: "PS Verbund – Kieswerke, Straßen- und Tiefbau, Infrabau, Bauschutt",
+  description:
+    "Die PS Verbund-Gruppe aus Perleberg: Kies, Sand und Splitt, Baustoff-Recycling, Straßen- und Tiefbau sowie Kabel- und Rohrleitungsbau in Brandenburg und Norddeutschland.",
+  applicationName: SITE_NAME,
+  formatDetection: { telephone: false },
 };
 
 export default function RootLayout({
@@ -41,6 +47,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {children}
+        <CookieConsent />
       </body>
     </html>
   );
