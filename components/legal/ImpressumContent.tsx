@@ -49,7 +49,7 @@ const companies = [
     handelsregister: "HRB 8260 NP, Amtsgericht Neuruppin",
     ustId: "DE260285342",
     telefon: "03876 / 300 830",
-    email: "info-strassenundtiefbau@psverbund.de",
+    email: "info-strassentiefbau@psverbund.de",
   },
 ]
 

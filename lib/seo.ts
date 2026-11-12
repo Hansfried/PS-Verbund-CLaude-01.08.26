@@ -116,7 +116,7 @@ export const subsidiaries = {
     logo: `${SITE_URL}/logo-strassen.png`,
     image: `${SITE_URL}/strassen-baustelle.jpg`,
     telephone: "+49 3876 300830",
-    email: "info-strassenundtiefbau@psverbund.de",
+    email: "info-strassentiefbau@psverbund.de",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Lenzenerstraße 39",
